@@ -26,16 +26,12 @@ If I had more time then I would have tried to implement a Trie data structure wi
 Assuming there would be more reads(accepting packets) than writes(adding new rules) I chose to use a hashmap and take ports as KEY.
 If the port range is long then a lot of memory would be wasted.
 
-### Testing
-I created a script to generate upto 500,000 lines of CSV.
-Due to less time, I could only test this program with the example input provided in pdf.
-To run tests simply run ```Test.py```
+### Running and Testing
+- I created a script to generate upto 500,000 lines of CSV. Due to less time, I could only test this program with the example input provided in pdf. To run tests simply run ```Test.py```
+- To populate the ```rule_map``` simply provide the path to csv file and run ```Firewall.py```.
 
 ### Team
-My first preference would be Platform team and second preference as Data team or Policy team.
+- My first preference would be Platform team and second preference as Data team or Policy team.
 
 ### Message to Reviewer
-Thank you for taking the time to review my code.
-I would like to mention that apart from strong foundation in data structures, algorithms and OOPS,
-I have excellent R&D and Troubleshooting skills as well. Given a chance I would prove myself to be one of the
-best Engineers at Illumio.
+- Thank you for taking the time to review my code. I would like to mention that apart from strong foundation in data structures, algorithms and OOPS, I have excellent R&D and Troubleshooting skills as well. Given a chance I would prove myself to be one of the best Engineers at Illumio.
