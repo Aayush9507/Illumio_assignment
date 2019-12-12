@@ -9,10 +9,10 @@ of rules.
 - ```insert_rule```: Function - Inserts new rule from CSV file, if a rule already exists then updates the rule.
 
 ### Idea and Approach
-- I used a hashmap to store ports as key and a Rule object as value. The Rule object has allowed IP range object, allowed protocol and allowed direction as its properties.
+- I used a hashmap as data structure because it allows constant time access and insertion. The Rule object has allowed IP range object, allowed protocol and allowed direction as its properties. Trie could be used but it would have required more time to implement.
 
 - To insert a new rule, I simply made PORT as key and a Rule object as value.
-If a rule already exists then I simply update the rule. Ex- If IP range needs to be extended or inbound or outbound direction needs to be changed.
+If a rule already exists then I simply update the rule. Ex: If IP range needs to be extended or inbound/outbound direction needs to be changed.
 
 - To check if a packet should be allowed, the program find the PORT in ```rule_map``` (hashmap of rules).
 If the port doesn't exist in ```rule_map``` then packet is discarded. Whereas if the PORT exists
@@ -23,7 +23,7 @@ it simply gets its Rule object and compares if the direction, protocol and IP ra
 If I had more time then I would have tried to implement a Trie data structure with IP addresses.
  
 - I think this approach is read efficient but write heavy.
-Assuming there would be more reads(accepting packets) than writes(adding new rules) I chose to take ports as KEY.
+Assuming there would be more reads(accepting packets) than writes(adding new rules) I chose to use a hashmap and take ports as KEY.
 If the port range is long then a lot of memory would be wasted.
 
 ### Testing
