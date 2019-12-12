@@ -36,5 +36,4 @@ for x in range(random.randint(0, 10000)):
 
 csv.close()
 
-
 #https://stackoverflow.com/questions/21014618/python-randomly-generated-ip-address-of-the-string
